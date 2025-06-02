@@ -43,7 +43,7 @@ Tre bottoni principali per accedere alle varie sezioni dell'app
 - 🚧 **RestActivity** *(non sviluppata)*
 
 **Funzionalità**
-Permette di navigare tra le sezioni attive dell'app tramite **'Intent'**
+- Permette di navigare tra le sezioni attive dell'app tramite **'Intent'**
 
 ---
 
@@ -88,7 +88,7 @@ Placeholder per future funzionalità RESTful **(es. chiamate API, consumo serviz
 ## ✔ Installazione
 1. Clona il repository:
    ```bash
-  https://github.com/denisestanzione/MyRestApp.git
+   https://github.com/denisestanzione/MyRestApp.git
 2. Apri il progetto in [**Android Studio**](https://developer.android.com/studio)
 3. Collega un emulatore o un dispositivo Android
 4. Per avviare l'app premi su **"Run"** ▶
