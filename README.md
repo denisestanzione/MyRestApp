@@ -20,7 +20,7 @@ Un'applicazione Android che, dopo autenticazione, permette di accedere a funzion
 ### **Activity 1: Login🔐**
 
 **Layout**
-- Due campi **'EditText'** per inserire usernamw e password
+- Due campi **'EditText'** per inserire username e password
 - Un bottone per inviare dati
 - Un'immagine rappresentativa **(logo cinema)**
 
