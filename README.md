@@ -40,7 +40,7 @@ Tre bottoni principali per accedere alle varie sezioni dell'app
 **Layout**
 - 🔎 **SearchActivity**
 - 🌐 **WebViewActivity**  
-- 🚧 **RestActivity** *(non sviluppata)*
+- 🚧 **DashboardActivity** *(non sviluppata)*
 
 **Funzionalità**
 - Permette di navigare tra le sezioni attive dell'app tramite **'Intent'**
@@ -70,7 +70,7 @@ Consente di aprire un sito we direttamente in-app utilizzando una **'WebView'**
 
 ---
 
-### **Activity 5: Sezione REST🚧**
+### **Activity 5**
 
 **Attualmente non sviluppata** 
 Placeholder per future funzionalità RESTful **(es. chiamate API, consumo servizi esterni)**
