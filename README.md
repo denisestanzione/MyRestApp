@@ -96,7 +96,7 @@ Placeholder per future funzionalità RESTful **(es. chiamate API, consumo serviz
 ---
 
 ## 📉 Funzionalità future 
-- Completamento della **'RestActivity'**
+- Completamento della **'DashboardActivity'**
 - Salvataggio locale della cronologia ricerche
 
 ---
