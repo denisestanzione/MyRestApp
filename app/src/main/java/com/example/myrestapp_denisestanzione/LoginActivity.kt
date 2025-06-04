@@ -1,5 +1,6 @@
 package com.example.myrestapp_denisestanzione
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -30,6 +31,9 @@ class LoginActivity : AppCompatActivity() {
             if(login(usernameString, passwordCodificata)){
                 val mioToast = Toast.makeText(this, "Benvenuto!", Toast.LENGTH_LONG)
                 mioToast.show()
+
+                // Passa all'activity menù
+                intent()
             }
             else{
                 val mioToast = Toast.makeText(this, "Credenziali errate!", Toast.LENGTH_LONG)
@@ -46,12 +50,16 @@ class LoginActivity : AppCompatActivity() {
             "User2" to "b3a8e0e1f9ab1bfe3a36f231f676f78bb30a519d2b21e6c530c0eee8ebb4a5d0",
             "User3" to "35a9e381b1a27567549b5f8a6f783c167ebf809f1c4d6a9e367240484d8ce281"
         )
-
         return credenziali[username] == password
     }
 
     private fun sha256(input: String): String {
         val bytes = MessageDigest.getInstance("SHA-256").digest(input.toByteArray())
         return bytes.joinToString("") { "%02x".format(it) }
+    }
+
+    private fun intent(){
+        val mioIntent = Intent(this, MenuActivity::class.java)
+        startActivity(mioIntent)
     }
 }
