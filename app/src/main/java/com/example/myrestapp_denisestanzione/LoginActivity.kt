@@ -2,9 +2,11 @@ package com.example.myrestapp_denisestanzione
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import java.security.MessageDigest
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,11 +14,20 @@ class LoginActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
+        val username = findViewById<EditText>(R.id.editTextUsername)
+        val password = findViewById<EditText>(R.id.editTextPassword)
+
         // Al click del pulsante
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
+            // Recupera le credenziali in input e convertile in Stringa
+            val usernameString = username.text.toString()
+            val passwordString = password.text.toString()
+            // Codifica la password per verificarla
+            val passwordCodificata = sha256(passwordString)
+
             // Verifica le credenziali
-            if(login("User1", "665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3")){
+            if(login(usernameString, passwordCodificata)){
                 val mioToast = Toast.makeText(this, "Benvenuto!", Toast.LENGTH_LONG)
                 mioToast.show()
             }
@@ -37,5 +48,10 @@ class LoginActivity : AppCompatActivity() {
         )
 
         return credenziali[username] == password
+    }
+
+    private fun sha256(input: String): String {
+        val bytes = MessageDigest.getInstance("SHA-256").digest(input.toByteArray())
+        return bytes.joinToString("") { "%02x".format(it) }
     }
 }
