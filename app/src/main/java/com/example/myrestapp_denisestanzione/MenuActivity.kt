@@ -24,10 +24,20 @@ class MenuActivity : AppCompatActivity() {
             intentWebView()
         }
 
+        // Al click del pulsante per la ricerca dei film
+        btnSearch.setOnClickListener {
+            intentSearch()
+        }
+
     }
 
     private fun intentWebView(){
         val mioIntent = Intent(this, WebViewActivity::class.java)
+        startActivity(mioIntent)
+    }
+    
+    private fun intentSearch(){
+        val mioIntent = Intent(this, SearchActivity::class.java)
         startActivity(mioIntent)
     }
 }
