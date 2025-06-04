@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MyRestApp_DeniseStanzione"
         tools:targetApi="31">
         <activity
+            android:name=".MovieAdapter"
+            android:exported="false" />
+        <activity
             android:name=".SearchActivity"
             android:exported="false" />
         <activity

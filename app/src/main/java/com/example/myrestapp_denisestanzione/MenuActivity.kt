@@ -35,7 +35,7 @@ class MenuActivity : AppCompatActivity() {
         val mioIntent = Intent(this, WebViewActivity::class.java)
         startActivity(mioIntent)
     }
-    
+
     private fun intentSearch(){
         val mioIntent = Intent(this, SearchActivity::class.java)
         startActivity(mioIntent)
